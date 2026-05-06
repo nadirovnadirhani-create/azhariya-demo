@@ -165,7 +165,7 @@ export default function Landing() {
         <div className="container">
           <div className="footer-content">
             <div className="footer-brand">
-              <img src="/logo.png" alt="Azhariya" className="footer-logo" />
+              <img src="./logo.png" alt="Azhariya" className="footer-logo" />
               <span className="footer-title">AZHARIYA</span>
             </div>
             <p className="footer-text">Демонстрационная платформа для изучения арабского языка</p>

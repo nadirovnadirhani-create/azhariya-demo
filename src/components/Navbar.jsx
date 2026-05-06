@@ -14,7 +14,7 @@ export default function Navbar() {
     <nav className={`navbar ${isLanding ? 'navbar-transparent' : ''}`}>
       <div className="navbar-inner container">
         <Link to={isAuthenticated ? '/dashboard' : '/'} className="navbar-brand">
-          <img src="/logo.png" alt="Azhariya" className="navbar-logo" />
+          <img src="./logo.png" alt="Azhariya" className="navbar-logo" />
           <span className="navbar-title">AZHARIYA</span>
         </Link>
 

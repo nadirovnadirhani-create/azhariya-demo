@@ -33,7 +33,7 @@ export default function Auth() {
     <div className="auth-page islamic-pattern-bg">
       <div className="auth-container animate-scale-in">
         <div className="auth-header">
-          <img src="/logo.png" alt="Azhariya" className="auth-logo" />
+          <img src="./logo.png" alt="Azhariya" className="auth-logo" />
           <h1 className="auth-title">AZHARIYA</h1>
           <p className="auth-arabic arabic" dir="rtl">أزهرية</p>
         </div>
