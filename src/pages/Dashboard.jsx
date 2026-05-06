@@ -7,7 +7,7 @@ import ProgressRing from '../components/ProgressRing';
 import './Dashboard.css';
 
 export default function Dashboard() {
-  const { user } = useAuth();
+  const { user, logout } = useAuth();
   const { totalCompleted, streak } = useProgress();
   const { hasSubscription } = useWallet();
 
@@ -19,10 +19,22 @@ export default function Dashboard() {
       <div className="container">
         {/* Welcome */}
         <div className="dashboard-welcome animate-fade-in-up">
-          <div className="welcome-text">
-            <p className="welcome-greeting">Ас-саляму алейкум! 👋</p>
-            <h1 className="welcome-name">{user?.name || 'Студент'}</h1>
-            <p className="welcome-subtitle">Продолжайте изучение арабского языка</p>
+          <div className="welcome-content">
+            <div className="welcome-text">
+              <p className="welcome-greeting">Ас-саляму алейкум! 👋</p>
+              <h1 className="welcome-name">{user?.name || 'Студент'}</h1>
+              <p className="welcome-subtitle">Продолжайте изучение арабского языка</p>
+              <button 
+                className="btn btn-outline btn-sm logout-btn" 
+                onClick={() => {
+                  logout();
+                  window.location.href = '/';
+                }}
+                style={{ marginTop: '1rem', color: 'white', borderColor: 'rgba(255,255,255,0.3)' }}
+              >
+                🚪 Выйти
+              </button>
+            </div>
           </div>
           <ProgressRing progress={overallProgress} />
         </div>
