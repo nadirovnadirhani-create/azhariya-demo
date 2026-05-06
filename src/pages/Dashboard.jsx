@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { useProgress } from '../context/ProgressContext';
 import { useWallet } from '../context/WalletContext';
@@ -7,6 +8,7 @@ import ProgressRing from '../components/ProgressRing';
 import './Dashboard.css';
 
 export default function Dashboard() {
+  const navigate = useNavigate();
   const { user, logout } = useAuth();
   const { totalCompleted, streak } = useProgress();
   const { hasSubscription } = useWallet();
@@ -28,7 +30,7 @@ export default function Dashboard() {
                 className="btn btn-outline btn-sm logout-btn" 
                 onClick={() => {
                   logout();
-                  window.location.href = '/';
+                  navigate('/');
                 }}
                 style={{ marginTop: '1rem', color: 'white', borderColor: 'rgba(255,255,255,0.3)' }}
               >
