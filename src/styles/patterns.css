@@ -1,0 +1,63 @@
+/* === Islamic Geometric Pattern (SVG as CSS background) === */
+
+.islamic-pattern-bg {
+  position: relative;
+}
+
+.islamic-pattern-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0.04;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='none' stroke='%230D4A3A' stroke-width='0.8'%3E%3Cpolygon points='40,4 52.36,16.36 64,4 76.36,16.36 64,28.72 76.36,40 64,52.36 76.36,64 64,76.36 52.36,64 40,76.36 27.64,64 16,76.36 4,64 16,52.36 4,40 16,28.72 4,16.36 16,4 27.64,16.36'/%3E%3Ccircle cx='40' cy='40' r='12'/%3E%3Cline x1='40' y1='0' x2='40' y2='80'/%3E%3Cline x1='0' y1='40' x2='80' y2='40'/%3E%3C/g%3E%3C/svg%3E");
+  background-repeat: repeat;
+  animation: patternDrift 60s linear infinite;
+  z-index: 0;
+}
+
+[data-theme="dark"] .islamic-pattern-bg::before {
+  opacity: 0.06;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='none' stroke='%23C8A84E' stroke-width='0.8'%3E%3Cpolygon points='40,4 52.36,16.36 64,4 76.36,16.36 64,28.72 76.36,40 64,52.36 76.36,64 64,76.36 52.36,64 40,76.36 27.64,64 16,76.36 4,64 16,52.36 4,40 16,28.72 4,16.36 16,4 27.64,16.36'/%3E%3Ccircle cx='40' cy='40' r='12'/%3E%3Cline x1='40' y1='0' x2='40' y2='80'/%3E%3Cline x1='0' y1='40' x2='80' y2='40'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Star pattern variant */
+.islamic-star-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0.035;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cg fill='none' stroke='%23C8A84E' stroke-width='0.6'%3E%3Cpath d='M30,2 L35,20 L53,15 L40,28 L53,40 L35,35 L30,53 L25,35 L7,40 L20,28 L7,15 L25,20 Z'/%3E%3Ccircle cx='30' cy='28' r='6'/%3E%3C/g%3E%3C/svg%3E");
+  background-repeat: repeat;
+  z-index: 0;
+}
+
+/* Arabesque border decorations */
+.arabesque-divider {
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--color-accent) 20%,
+    var(--color-accent) 50%,
+    var(--color-accent) 80%,
+    transparent 100%
+  );
+  opacity: 0.3;
+  margin: var(--space-8) 0;
+  position: relative;
+}
+
+.arabesque-divider::before {
+  content: '✦';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--color-accent);
+  font-size: var(--fs-sm);
+  background: var(--color-surface);
+  padding: 0 var(--space-3);
+}

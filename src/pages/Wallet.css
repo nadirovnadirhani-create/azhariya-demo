@@ -1,0 +1,266 @@
+.wallet {
+  position: relative;
+}
+
+.wallet-title {
+  font-size: var(--fs-3xl);
+  margin-bottom: var(--space-8);
+  position: relative;
+  z-index: var(--z-base);
+}
+
+.balance-card {
+  background: linear-gradient(135deg, var(--color-primary-dark), var(--color-primary));
+  color: white;
+  padding: var(--space-8);
+  margin-bottom: var(--space-10);
+  border: none;
+  position: relative;
+  z-index: var(--z-base);
+}
+
+.balance-header {
+  margin-bottom: var(--space-6);
+}
+
+.balance-label {
+  display: block;
+  font-size: var(--fs-sm);
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: var(--space-2);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.balance-amount {
+  font-size: var(--fs-5xl);
+  font-weight: var(--fw-bold);
+}
+
+.balance-sub {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-top: var(--space-5);
+  padding-top: var(--space-5);
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.balance-sub-info {
+  font-size: var(--fs-sm);
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Plans */
+.plans-section {
+  margin-bottom: var(--space-10);
+  position: relative;
+  z-index: var(--z-base);
+}
+
+.plans-title {
+  font-size: var(--fs-2xl);
+  margin-bottom: var(--space-2);
+  color: var(--color-text);
+}
+
+.plans-subtitle {
+  font-size: var(--fs-base);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-8);
+}
+
+.plans-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-5);
+}
+
+.plan-card {
+  text-align: center;
+  padding: var(--space-8);
+  position: relative;
+}
+
+.plan-card.popular {
+  border: 2px solid var(--color-accent);
+  transform: scale(1.04);
+}
+
+.plan-badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--color-accent);
+  color: var(--color-primary-dark);
+  padding: var(--space-1) var(--space-4);
+  border-radius: var(--radius-full);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+
+.plan-name {
+  font-size: var(--fs-xl);
+  color: var(--color-text);
+  margin-bottom: var(--space-1);
+}
+
+.plan-duration {
+  font-size: var(--fs-sm);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-5);
+}
+
+.plan-price {
+  margin-bottom: var(--space-6);
+}
+
+.plan-currency {
+  font-size: var(--fs-xl);
+  vertical-align: super;
+  color: var(--color-text-secondary);
+}
+
+.plan-amount {
+  font-size: var(--fs-5xl);
+  font-weight: var(--fw-bold);
+  color: var(--color-primary);
+}
+
+[data-theme="dark"] .plan-amount {
+  color: var(--color-accent);
+}
+
+.plan-features {
+  text-align: left;
+  margin-bottom: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  font-size: var(--fs-sm);
+  color: var(--color-text-secondary);
+}
+
+.plan-features li {
+  color: var(--color-text);
+}
+
+.plan-btn {
+  width: 100%;
+}
+
+.plan-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Top Up Modal */
+.topup-title {
+  font-size: var(--fs-xl);
+  text-align: center;
+  margin-bottom: var(--space-6);
+  color: var(--color-text);
+}
+
+.topup-amounts {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-3);
+  margin-bottom: var(--space-6);
+}
+
+.topup-chip {
+  padding: var(--space-3) var(--space-4);
+  border: 2px solid var(--color-card-border);
+  border-radius: var(--radius-lg);
+  font-weight: var(--fw-semibold);
+  font-size: var(--fs-base);
+  transition: all var(--transition-fast);
+  color: var(--color-text);
+}
+
+.topup-chip.active {
+  border-color: var(--color-primary);
+  background: rgba(13, 74, 58, 0.08);
+  color: var(--color-primary);
+}
+
+[data-theme="dark"] .topup-chip.active {
+  border-color: var(--color-accent);
+  background: rgba(200, 168, 78, 0.1);
+  color: var(--color-accent);
+}
+
+.topup-summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-4);
+  background: var(--color-surface-alt);
+  border-radius: var(--radius-lg);
+  margin-bottom: var(--space-6);
+  font-size: var(--fs-sm);
+  color: var(--color-text-secondary);
+}
+
+.topup-total {
+  font-size: var(--fs-xl);
+  font-weight: var(--fw-bold);
+  color: var(--color-primary);
+}
+
+[data-theme="dark"] .topup-total {
+  color: var(--color-accent);
+}
+
+.topup-confirm {
+  width: 100%;
+  margin-bottom: var(--space-4);
+}
+
+.topup-hint {
+  text-align: center;
+  font-size: var(--fs-xs);
+  color: var(--color-text-secondary);
+}
+
+.processing {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+}
+
+.spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: white;
+  border-radius: var(--radius-full);
+  animation: spin 0.6s linear infinite;
+}
+
+@media (max-width: 768px) {
+  .plans-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+
+  .plan-card.popular {
+    transform: none;
+    order: -1;
+  }
+
+  .topup-amounts {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .balance-amount {
+    font-size: var(--fs-4xl);
+  }
+}
