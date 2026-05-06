@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Navigate, useLocation } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import { AuthProvider, useAuth } from './context/AuthContext';
 import { ProgressProvider } from './context/ProgressContext';
 import { WalletProvider } from './context/WalletContext';
@@ -76,7 +76,7 @@ function AppLayout() {
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <Router>
       <ThemeProvider>
         <AuthProvider>
           <ProgressProvider>
@@ -86,6 +86,6 @@ export default function App() {
           </ProgressProvider>
         </AuthProvider>
       </ThemeProvider>
-    </BrowserRouter>
+    </Router>
   );
 }
