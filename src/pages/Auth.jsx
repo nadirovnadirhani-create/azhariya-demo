@@ -13,6 +13,14 @@ export default function Auth() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    
+    // Check for Admin Credentials
+    if (email === 'admin@azharia.com' && password === 'admin123') {
+      login('Администратор', email);
+      navigate('/admin');
+      return;
+    }
+
     if (isLogin) {
       login(name || 'Студент', email);
     } else {

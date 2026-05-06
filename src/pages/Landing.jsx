@@ -170,7 +170,10 @@ export default function Landing() {
             </div>
             <p className="footer-text">Демонстрационная платформа для изучения арабского языка</p>
             <div className="arabesque-divider" />
-            <p className="footer-copyright">© 2026 Azhariya. Все права защищены.</p>
+            <div className="footer-bottom">
+              <p className="footer-copyright">© 2026 Azhariya. Все права защищены.</p>
+              <Link to="/auth" className="admin-link">Вход для преподавателей</Link>
+            </div>
           </div>
         </div>
       </footer>

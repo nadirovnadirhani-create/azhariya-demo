@@ -264,9 +264,28 @@
   font-size: var(--fs-sm);
 }
 
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: var(--space-4);
+}
+
 .footer-copyright {
   color: var(--color-text-secondary);
   font-size: var(--fs-xs);
+}
+
+.admin-link {
+  font-size: var(--fs-xs);
+  color: var(--color-text-secondary);
+  opacity: 0.5;
+  transition: opacity 0.3s;
+}
+
+.admin-link:hover {
+  opacity: 1;
+  color: var(--color-accent);
 }
 
 /* === Responsive === */
