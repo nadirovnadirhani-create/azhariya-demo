@@ -91,8 +91,13 @@ export function playArabic(
     return;
   }
 
+  let audioUrl = src;
+  if (audioUrl.startsWith('/')) {
+    audioUrl = `${process.env.NEXT_PUBLIC_BASE_PATH || ''}${audioUrl}`;
+  }
+
   const sound = new Howl({
-    src: [src],
+    src: [audioUrl],
     html5: true,
     onplay: () => options.onStart?.(),
     onend: () => {
