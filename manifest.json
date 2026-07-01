@@ -1,0 +1,24 @@
+{
+  "name": "Азхария Академия",
+  "short_name": "Азхария",
+  "description": "Интерактивная образовательная платформа изучения арабского языка по учебнику Азхария",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FFFBF5",
+  "theme_color": "#0F4C3A",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon-180.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/logo-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
